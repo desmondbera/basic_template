@@ -1,21 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
 header {
-  display: block;
-  background-color: black;
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(0.85turn, #3f87a6, #f69d3c);
   width: 100%;
-  height: 50px;
+  height: 75px;
   color: white;
 }
 #headerButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 10px; */
 }
 .navButton {
-  float: right;
+  padding-right: 10px;
 }
 
 .navButton a {
-  color: white;
+
+  color: black;
+  font-size: 36px;
+  opacity: 0.7;
+  transition: 0.4s;
+}
+
+.navButton a:hover {
+  color: hsla(214, 100%, 76%, 1);
+  opacity: 1;
+  text-shadow: inset 0 0 5px white;
 }
 
 footer {
@@ -24,4 +46,25 @@ footer {
   height: 50px;
   background-color: black;
   color: white;
+}
+
+@media (max-width: 600px) {
+  .navButton a {
+    font-size: 27px;
+  }
+  #headerButtons {
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 365px) {
+  #headerButtons {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .navButton a {
+    font-size: 18px;
+  }
 }
